@@ -9,13 +9,15 @@
   },
   "scripts": {
     "build": "rimraf lib && tsc -p tsconfig.build.json",
-    "test": "jest",
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/ava -v",
     "test:watch": "jest --watchAll",
     "lint": "tslint --project tsconfig.json --fix \"src/**/*.ts\" && prettier --write \"src/**/*.ts\"",
     "cover": "jest --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "precommit": "lint-staged && npm run build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov && codecov",
+    "standard": "./node_modules/.bin/standard index.js"
   },
   "repository": {
     "type": "git",
@@ -64,7 +66,13 @@
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.2.4"
+    "typescript": "^3.2.4",
+    "ava": "^0.16.0",
+    "co-exec": "^1.0",
+    "codecov": "^1.0.1",
+    "ghooks": "^1.2.4",
+    "nyc": "^10.0.0",
+    "standard": "^8.4.0"
   },
   "peerDependencies": {
     "awilix": "^4.0.0"
@@ -115,5 +123,10 @@
       "latest"
     ],
     "plugins": "transform-decorators-legacy"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run standard"
+    }
   }
 }

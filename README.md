@@ -1,12 +1,12 @@
 # awilix-socketio
 
-[![NPM version][npm-image]][npm-url]
-[![Downloads][downloads-image]][npm-url]
+[![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mrnkr/awilix-socketio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![NPM version](https://img.shields.io/npm/v/awilix-socketio.svg?style=flat-square)](https://www.npmjs.com/package/awilix-socketio)
+[![Build](https://travis-ci.org/mrnkr/awilix-socketio.svg?branch=master)](https://travis-ci.org/mrnkr/awilix-socketio)
+[![codecov.io](https://codecov.io/github/mrnkr/awilix-socketio/coverage.svg?branch=master)](https://codecov.io/github/mrnkr/awilix-socketio?branch=master)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Twitter Follow][twitter-image]][twitter-url]
 
-[npm-image]:http://img.shields.io/npm/v/awilix-socketio.svg
-[npm-url]:https://npmjs.org/package/awilix-socketio
-[downloads-image]:http://img.shields.io/npm/dm/awilix-socketio.svg
 [twitter-image]:https://img.shields.io/twitter/follow/xmr_nkr.svg?style=social&label=Follow%20me
 [twitter-url]:https://twitter.com/xmr_nkr
 
